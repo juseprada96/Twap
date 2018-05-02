@@ -1,0 +1,21 @@
+<div class="container">
+<div class="row">
+  <form class="form-inline example-form">
+    <div class="form-group">
+  <label>Materia a dictar</label>
+  <mat-form-field class="">
+    <input class="form-control" type="text" placeholder="" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+<button type="submit" class="btn btn-primary">Agregar materia</button>
+</div>
+</form>
+  <app-adicionar-asignatura></app-adicionar-asignatura>
+</div>
+</div>
+
