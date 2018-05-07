@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { AdicionarAsignaturaComponent } from './components/adicionar-asignatura/adicionar-asignatura.component';
@@ -20,6 +21,18 @@ import { FormularioSemilleroComponent } from './components/formulario-semillero/
 import { AdicionarProyectoGradoComponent } from './components/adicionar-proyecto-grado/adicionar-proyecto-grado.component';
 import { AdicionarSemilleroComponent } from './components/adicionar-semillero/adicionar-semillero.component';
 
+
+const appRoutes : Routes = [
+{
+  path:'home', component: HomeComponent
+},
+{
+  path:'planDocencia', component: FormularioDocenciaComponent
+}
+{
+  path: '**', redirectTo: 'home'
+}
+]
 
 @NgModule({
   declarations: [
@@ -42,6 +55,7 @@ import { AdicionarSemilleroComponent } from './components/adicionar-semillero/ad
     MatInputModule,
     MatExpansionModule,
     MatTabsModule,
+    RouterModule.forRoot(appRoutes,{enableTracing : true}),
     BrowserAnimationsModule
   ],
   providers: [],

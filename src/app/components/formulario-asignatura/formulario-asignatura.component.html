@@ -22,6 +22,6 @@
 </form>
 </div>
 <div *ngFor="let asignatura of materiasAgregadas">
-<app-adicionar-asignatura [asignatura]="asignatura"></app-adicionar-asignatura>
+<app-adicionar-asignatura (eventoEliminar) = "eliminarAsignatura($event)" [asignatura]="asignatura"></app-adicionar-asignatura>
 </div>
 </div>

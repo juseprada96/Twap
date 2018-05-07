@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ProyectoGrado } from '../../models/proyecto-grado';
 
 @Component({
@@ -8,7 +8,8 @@ import { ProyectoGrado } from '../../models/proyecto-grado';
 })
 export class FormularioProyectoGradoComponent implements OnInit {
 
-  proyectos: ProyectoGrado[]
+
+  @Input() proyectos: ProyectoGrado[]
   proyecto: ProyectoGrado;
 
   constructor() { 
@@ -22,6 +23,7 @@ export class FormularioProyectoGradoComponent implements OnInit {
     p.numeroProyecto = this.proyectos.length +1;
     p.estudiantes = []
     this.proyectos.push(p);
+    this.proyecto = new ProyectoGrado();
   }
 
   eliminarProyecto(event:ProyectoGrado){

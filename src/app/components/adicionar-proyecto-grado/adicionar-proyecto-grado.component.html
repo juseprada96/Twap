@@ -28,22 +28,20 @@
           <div class="col-md-3">
         <span>Nombre estudiante:</span>
       </div>
-          <div class="col-md-3"></div>
           <div class="col-md-3">
               <mat-form-field>
-                  <input matInput placeholder="Nombre estudiante"  name="estudiante">
+                  <input matInput placeholder="Nombre estudiante"  name="estudiante" [(ngModel)] = "estudiante.nombre">
                 </mat-form-field>
       </div> 
       </div>
       <div class="row">
           <div class="col-md-3"></div>
           <div class="col-md-3">
-        <span>Codigo</span>
+        <span>Codigo:</span>
       </div>
-          <div class="col-md-3"></div>
           <div class="col-md-3">
               <mat-form-field [floatLabel]="never">
-                  <input matInput placeholder="Codigo"  name="codigo">
+                  <input matInput placeholder="Codigo"  name="codigo" [(ngModel)] = "estudiante.codigo">
                 </mat-form-field>
       </div> 
       </div>
