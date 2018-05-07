@@ -1,24 +1,70 @@
-<div class="container">
-<div class="row">
-  <span>{{asignatura.nombreAsignatura}} - {{asignatura.NRC}}</span>
-  <button class="btn btn-default">^</button>
+<div class="">
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+        <span>{{asignatura.nombreAsignatura}} - {{asignatura.NRC}}</span>
+    </mat-panel-title>
+    <mat-panel-description>
+      <span class="help-block">Creditos: {{asignatura.creditos}} - Pregrado</span>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <div *ngIf="asignatura.grupos?.length else elseTemplate">
+    <div *ngFor="let grupo of asignatura.grupos">
+      <div class="grupo">
+  <div class="row">
+    <div class="col-md-3">
+    <label>Grupo {{grupo.numeroGrupo}}</label>
+  </div>
+  <div class="col-md-6">
+    <label>{{asignatura.nombreAsignatura}} - {{asignatura.NRC}}</label>
+  </div>
+  <div class="col-md-2"></div>
+  <div class="col-md-1"><button class="eliminar" (click)="eliminarGrupo(grupo.numeroGrupo)"><i class="material-icons">delete</i></button></div>
+  </div>
+  <form>
+  <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-3">
+    <span>Numero de estudiantes</span>
+  </div>
+  </div>
+  <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-3">
+          <mat-form-field>
+              <input matInput placeholder="Numero estudiantes" [(ngModel)] = "grupo.numeroEstudiantes" name="estudiantes">
+            </mat-form-field>
+  </div> 
+  </div>
+  <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-3">
+    <span>Numero de horas semanales</span>
+  </div>
+  </div>
+  <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-3">
+          <mat-form-field [floatLabel]="never">
+              <input matInput placeholder="Numero horas semanales" [(ngModel)] = "grupo.numeroHoras" name="horas">
+            </mat-form-field>
+  </div> 
+  </div>
+  </form>
 </div>
-  <span class="help-block">{{asignatura.creditos}}</span>
+</div>
 <div class="row">
   <div class="col-md-3">
-  <label>Grupo 1</label>
-  <label>{{asignatura.nombreAsignatura}} - {{asignatura.NRC}}</label>
+    <button class="btn btn-default" (click)= "agregarGrupo()">Adicionar grupo</button>
+  </div>
 </div>
 </div>
-<div class="row">
-  <div class="col-md-3"></div>
-  <form>
-  <label>Horario materia</label>
-</form>
+<ng-template #elseTemplate>
+  <div class = "row">
+  <div class = "col-md-3">
+    <button class="btn btn-default" (click)= "agregarGrupo()">Adicionar grupo</button>
+  </div>
 </div>
-<div class="row">
-    <div class="col-md-3"></div>
-  <span>Estudiantes por grupo</span>
-  <input type="text" placeholder="#"/>
-</div>
+</ng-template>
+</mat-expansion-panel>
 </div>

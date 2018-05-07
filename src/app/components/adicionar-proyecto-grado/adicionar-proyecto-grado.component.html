@@ -1,0 +1,68 @@
+<div class="">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            <span>{{proyecto.nombre}}</span>
+        </mat-panel-title>
+        <mat-panel-description>
+          <span class="help-block">Proyecto {{proyecto.numeroProyecto}}</span>
+          <button class="eliminar" (click) = "eliminarProyecto()"><i class="material-icons">delete</i></button>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div *ngIf="proyecto.estudiantes?.length else elseTemplate">
+        <div *ngFor="let estudiante of proyecto.estudiantes">
+          <div class="grupo">
+      <div class="row">
+        <div class="col-md-3">
+        <label>Estudiante:</label>
+      </div>
+      <div class="col-md-6">
+        <label></label>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-1"><button class="eliminar" (click)="eliminarEstudiante(estudiante.codigo)"><i class="material-icons">delete</i></button></div>
+      </div>
+      <form>
+      <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-3">
+        <span>Nombre estudiante:</span>
+      </div>
+          <div class="col-md-3"></div>
+          <div class="col-md-3">
+              <mat-form-field>
+                  <input matInput placeholder="Nombre estudiante"  name="estudiante">
+                </mat-form-field>
+      </div> 
+      </div>
+      <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-3">
+        <span>Codigo</span>
+      </div>
+          <div class="col-md-3"></div>
+          <div class="col-md-3">
+              <mat-form-field [floatLabel]="never">
+                  <input matInput placeholder="Codigo"  name="codigo">
+                </mat-form-field>
+      </div> 
+      </div>
+      </form>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <button class="btn btn-default" (click)= "agregarEstudiante()">Adicionar estudiante</button>
+      </div>
+    </div>
+    </div>
+    <ng-template #elseTemplate>
+      <div class = "row">
+      <div class = "col-md-3">
+        <button class="btn btn-default" (click)= "agregarEstudiante()">Adicionar estudiante</button>
+      </div>
+    </div>
+    </ng-template>
+    </mat-expansion-panel>
+    </div>
+    

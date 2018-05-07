@@ -3,7 +3,8 @@ import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs/Observable';
 import {startWith} from 'rxjs/operators/startWith';
 import {map} from 'rxjs/operators/map';
-//mport "@angular/material/prebuilt-themes/indigo-pink.css";
+import {Asignatura} from '../../models/asignatura';
+import "@angular/material/prebuilt-themes/indigo-pink.css";
 @Component({
   selector: 'app-formulario-asignatura',
   templateUrl: './formulario-asignatura.component.html',
@@ -12,29 +13,66 @@ import {map} from 'rxjs/operators/map';
 
 export class FormularioAsignaturaComponent implements OnInit {
 
-  constructor() { }
+  
 
   myControl: FormControl = new FormControl();
+  asignaturaSelecionada:Asignatura
 
+  a1: Asignatura = {
+    idAsignatura: '1',
+    nombreAsignatura: 'Principios Fisico Quimica',
+    NRC: '26123',
+    creditos: 3,
+    grupos: []
+  }
+  a2: Asignatura = {
+    idAsignatura: '2',
+    nombreAsignatura: 'Laboratorio Fisico Quimica',
+    NRC: '46123',
+    creditos: 1,
+    grupos: []
+  }
   options = [
-    'One',
-    'Two',
-    'Three'
+    this.a1,
+    this.a2
   ];
 
-  filteredOptions: Observable<string[]>;
+  materiasAgregadas: Asignatura[];
+  filteredOptions: Observable<Asignatura[]>;
+  constructor() { 
+    this.materiasAgregadas = [];
+  }
+
+  
 
   ngOnInit() {
     this.filteredOptions = this.myControl.valueChanges
       .pipe(
-        startWith(''),
-        map(val => this.filter(val))
+        startWith<string | Asignatura>(''),
+        map(value => typeof value === 'string' ? value : value.nombreAsignatura),
+        map(name => name ? this.filter(name) : this.options.slice())
       );
   }
 
-  filter(val: string): string[] {
-    return this.options.filter(option =>
-      option.toLowerCase().indexOf(val.toLowerCase()) === 0);
+  filter(name: string): Asignatura[] {
+    return this.options.filter(option =>{
+      if(option.nombreAsignatura.toLowerCase().indexOf(name.toLowerCase()) === 0 
+      || option.NRC.toLowerCase().indexOf(name.toLocaleLowerCase())===0){
+        return true;
+      }
+  });
   }
 
+  agregarAsignatura(){
+    if(this.asignaturaSelecionada){
+    this.materiasAgregadas.push(this.asignaturaSelecionada);
+  }else{
+    alert('Seleccione una asignatura');
+  }
+  }
+
+
+  displayFn(asignatura?: Asignatura): string | undefined {
+    return asignatura ? asignatura.nombreAsignatura : undefined;
+  }
 }

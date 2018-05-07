@@ -1,21 +1,27 @@
-<div class="container">
-<div class="row">
-  <form class="form-inline example-form">
-    <div class="form-group">
+<div class="container main">
+<div class="row header">
+
+<form class="" (ngSubmit) = "agregarAsignatura()">
+  <div class="col-md-3">
   <label>Materia a dictar</label>
+  </div>
+  <div class="col-md-4">
   <mat-form-field class="">
-    <input class="form-control" type="text" placeholder="" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-    <mat-autocomplete #auto="matAutocomplete">
+    <input type="text" placeholder="Nombre o NRC" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto" [(ngModel)]="asignaturaSelecionada">
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
       <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-        {{ option }}
+        {{ option.nombreAsignatura }}
       </mat-option>
     </mat-autocomplete>
   </mat-form-field>
-
-<button type="submit" class="btn btn-primary">Agregar materia</button>
+</div>
+<div class="col-md-2"></div>
+<div class="col-md-2">
+  <button type="submit" class="btn btn-primary">Agregar materia</button>
 </div>
 </form>
-  <app-adicionar-asignatura></app-adicionar-asignatura>
+</div>
+<div *ngFor="let asignatura of materiasAgregadas">
+<app-adicionar-asignatura [asignatura]="asignatura"></app-adicionar-asignatura>
 </div>
 </div>
-

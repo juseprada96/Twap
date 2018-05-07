@@ -1,21 +1,37 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { AdicionarAsignaturaComponent } from './components/adicionar-asignatura/adicionar-asignatura.component';
 import { FormularioAsignaturaComponent } from './components/formulario-asignatura/formulario-asignatura.component';
-import { FormsModule } from '@angular/forms';
-import {ReactiveFormsModule} from '@angular/forms';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import { MatFormFieldModule } from '@angular/material';
-import {MatInputModule} from '@angular/material';
+
+
+import { MatAutocompleteModule} from '@angular/material/autocomplete';
+import { MatInputModule } from '@angular/material';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTabsModule } from '@angular/material/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormularioDocenciaComponent } from './components/formulario-docencia/formulario-docencia.component';
+import { FormularioProyectoGradoComponent } from './components/formulario-proyecto-grado/formulario-proyecto-grado.component';
+import { FormularioSemilleroComponent } from './components/formulario-semillero/formulario-semillero.component';
+import { AdicionarProyectoGradoComponent } from './components/adicionar-proyecto-grado/adicionar-proyecto-grado.component';
+import { AdicionarSemilleroComponent } from './components/adicionar-semillero/adicionar-semillero.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AdicionarAsignaturaComponent,
-    FormularioAsignaturaComponent
+    FormularioAsignaturaComponent,
+    FormularioDocenciaComponent,
+    FormularioProyectoGradoComponent,
+    FormularioSemilleroComponent,
+    AdicionarProyectoGradoComponent,
+    AdicionarSemilleroComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +39,10 @@ import {MatInputModule} from '@angular/material';
     MatAutocompleteModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatExpansionModule,
+    MatTabsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
