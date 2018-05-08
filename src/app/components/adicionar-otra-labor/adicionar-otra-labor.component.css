@@ -1,0 +1,26 @@
+.mat-expansion-panel-header-title,
+.mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+#horas {
+  width: 40%;
+}
+
+#eliminar {
+  margin-left: 60%;
+}
+
+.lab {
+  vertical-align: middle;
+  margin-top: 2%;
+}
+
+#contenido {
+  margin-left: 2.3%;
+}

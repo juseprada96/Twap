@@ -7,16 +7,16 @@
       </div>
       <div class="col-md-4">
         <mat-form-field>
-          <input type="text" placeholder="Nombre" matInput [(ngModel)]="laborSeleccionada">
+          <input type="text" placeholder="Nombre" matInput [(ngModel)]="otraLabor.nombreActividadAdmon" name="labor">
         </mat-form-field>
       </div>
       <div class="col-md-2"></div>
       <div class="col-md-2">
-        <button type="submit" class="btn btn-primary">Agregar labor</button>
+        <button class="btn btn-primary" type="submit">Agregar labor</button>
       </div>
     </form>
   </div>
   <div *ngFor="let labor of otrasLaboresAgregadas">
-    <app-adicionar-labor [labor]="labor" (myevent)="eliminarLabor($event)"></app-adicionar-labor>
+    <app-adicionar-otra-labor [otraLabor]="labor" (myEvent)="eliminarLabor($event)"></app-adicionar-otra-labor>
   </div>
 </div>

@@ -8,24 +8,23 @@
         {{labor.nombreActividadAdmon}}
       </mat-panel-description>
     </mat-expansion-panel-header>
-  <div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-3 lab">
-      <mat-label>Descripción:</mat-label>
+    <div id="contenido">
+      <div class="row">
+        <div>
+          <mat-label>Descripción:</mat-label>
+        </div>
+        <div class="">
+          <mat-form-field class="">
+            <textarea matInput [(ngModel)]="labor.descripcionActividadAdmon"></textarea>
+          </mat-form-field>
+        </div>
       </div>
-      <div class="col-md-3">
-      <mat-form-field class="example-full-width">
-        <textarea matInput placeholder="Descripción" [(ngModel)]="labor.descripcionActividadAdmon"></textarea>
-      </mat-form-field>
-    </div>
-    </div>
-    <div class="row">
-      <mat-label id="horas">Carga horaria: {{labor.horasActividadAdmon}} horas</mat-label>
-      <a id="eliminar" (click)="lanzar()">
-        <mat-icon>delete</mat-icon>
-      </a>
-
-
+      <div class="row">
+        <mat-label id="horas">Carga horaria: {{labor.horasActividadAdmon}} horas</mat-label>
+        <a id="eliminar" (click)="lanzar()">
+          <mat-icon>delete</mat-icon>
+        </a>
+      </div>
     </div>
 
 

@@ -13,10 +13,14 @@
 }
 
 #eliminar {
-  padding-left: 70%;
+  margin-left: 70%;
 }
 
 .lab{
   vertical-align: middle;
   margin-top: 2%;
+}
+
+#contenido {
+  margin-left: 2.3%;
 }

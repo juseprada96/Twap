@@ -8,18 +8,21 @@ import {ActividadAdministracion} from '../../models/actividad-administracion';
 })
 export class FormularioOtrasLaboresComponent implements OnInit {
 
-  laborSeleccionada: ActividadAdministracion;
+  otraLabor: ActividadAdministracion;
   otrasLaboresAgregadas: ActividadAdministracion[];
+
   constructor() {
     this.otrasLaboresAgregadas = [];
+    this.otraLabor = new ActividadAdministracion();
   }
 
   ngOnInit() {
   }
 
   agregarLabor() {
-    if (this.laborSeleccionada != null) {
-      this.otrasLaboresAgregadas.push(this.laborSeleccionada);
+    if (this.otraLabor.nombreActividadAdmon.trim() !== '') {
+      this.otraLabor.idActividadAdmon = (this.otrasLaboresAgregadas.length + 1) + '';
+      this.otrasLaboresAgregadas.push(this.otraLabor);
     } else {
       alert('Escriba el nombre de la labor');
     }
