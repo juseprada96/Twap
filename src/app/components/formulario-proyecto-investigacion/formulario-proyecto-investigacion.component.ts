@@ -12,7 +12,6 @@ export class FormularioProyectoInvestigacionComponent implements OnInit {
   proyecto: ProyectoInvestigacion;
 
   constructor() {
-    this.proyectos = [];
     this.proyecto = new ProyectoInvestigacion;
   }
 

@@ -11,7 +11,6 @@ export class FormularioPropuestaInvestigacionComponent implements OnInit {
   @Input() propuestas: PropuestaInvestigacion[];
 
   constructor() {
-    this.propuestas = [];
     this.propuesta = new PropuestaInvestigacion();
   }
 

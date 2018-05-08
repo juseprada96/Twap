@@ -2,13 +2,13 @@
     <div class="row">
       <mat-tab-group>
         <mat-tab label="Propuesta Investigacion">
-          <app-formulario-propuesta-investigacion></app-formulario-propuesta-investigacion>
+          <app-formulario-propuesta-investigacion [propuestas]="planInvestigacion.propuestaInvestagacion"></app-formulario-propuesta-investigacion>
         </mat-tab>
         <mat-tab label="Proyectos de investigacion">
-          <app-formulario-proyecto-investigacion></app-formulario-proyecto-investigacion>
+          <app-formulario-proyecto-investigacion [proyectos]="planInvestigacion.proyectosInvestigacion"></app-formulario-proyecto-investigacion>
         </mat-tab>
         <mat-tab label="Dirección jovenes investigadores">
-          <app-formulario-proyecto-grado></app-formulario-proyecto-grado>
+          <app-formulario-proyecto-grado [proyectos]="planInvestigacion.proyectosJovenes"></app-formulario-proyecto-grado>
         </mat-tab>
     </mat-tab-group>
   </div>

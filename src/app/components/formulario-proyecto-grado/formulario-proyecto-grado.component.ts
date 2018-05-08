@@ -13,7 +13,6 @@ export class FormularioProyectoGradoComponent implements OnInit {
   proyecto: ProyectoGrado;
 
   constructor() {
-    this.proyectos = [];
     this.proyecto = new ProyectoGrado;
   }
 

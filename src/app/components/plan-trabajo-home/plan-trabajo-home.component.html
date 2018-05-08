@@ -13,7 +13,7 @@
               </div>
         </mat-card-content>
         <mat-card-actions>
-          <button class="btn btn-default">Ver</button>
+          <button class="btn btn-default" (click)= "seleccionarPlan(plan);modal2.show()">Ver</button>
         </mat-card-actions>
       </mat-card>
     </div>
@@ -47,7 +47,7 @@
       <app-formulario-plan-trabajo [planTrabajo] = "planTrabajo"></app-formulario-plan-trabajo>
     </div>
     <div class="app-modal-footer">
-      <button type="button" class="btn btn-default" (click)="modal.hide()">Cancelar</button>
+      <button type="button" class="btn btn-default" (click)="modal2.hide()">Cancelar</button>
       <button type="button" class="btn btn-primary" (click)="agregarPlan()">Guardar plan</button>
     </div>
   </app-modal>

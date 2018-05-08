@@ -67,6 +67,9 @@ export class PlanTrabajoHomeComponent implements OnInit {
     return n;
   }
 
+  seleccionarPlan(plan){
+    this.planTrabajo = plan;
+  }
 
 
   ngOnInit() {
