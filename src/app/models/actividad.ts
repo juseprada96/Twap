@@ -1,4 +1,4 @@
-export class Actividades {
+export class Actividad {
   idActividad: string;
   nombreActividad: string;
   descripcionActividad: string;

@@ -3,12 +3,12 @@
   
       <form class="" (ngSubmit)="agregarProyecto()">
         <div class="col-md-3">
-          <label>Proyecto de grado</label>
+          <label>Proyecto de investigacion</label>
         </div>
         <div class="col-md-4">
           <mat-form-field class="">
             <input type="text" placeholder="Nombre" name="nombreProyecto" aria-label="Number" matInput
-                   [(ngModel)]="proyecto.nombre">
+                   [(ngModel)]="proyecto.nombreProyecto">
           </mat-form-field>
         </div>
         <div class="col-md-2"></div>
@@ -18,8 +18,8 @@
       </form>
     </div>
     <div *ngFor="let proyecto of proyectos">
-      <app-adicionar-proyecto-grado (eventoEliminar)="eliminarProyecto($event)"
-                                    [proyecto]="proyecto"></app-adicionar-proyecto-grado>
+      <app-adicionar-proyecto-investigacion (eventoEliminar)="eliminarProyecto($event)"
+                                    [proyecto]="proyecto"></app-adicionar-proyecto-investigacion>
     </div>
   </div>
   

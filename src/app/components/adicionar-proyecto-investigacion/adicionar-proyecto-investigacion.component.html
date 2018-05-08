@@ -1,3 +1,110 @@
-<p>
-  adicionar-proyecto-investigacion works!
-</p>
+<div class="">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <span>{{proyecto.nombreProyecto}}</span>
+      </mat-panel-title>
+      <mat-panel-description>
+        <span class="help-block">Proyecto {{proyecto.idProyectoInvestigacion}}</span>
+        <button class="eliminar" (click)="eliminarProyecto()"><i class="material-icons">delete</i></button>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="row">
+      <div class="example-container">
+        <mat-form-field>
+          <input matInput placeholder="Tiempo total estimado" [(ngModel)]="proyecto.tiempoTotal" name="tiempo">
+        </mat-form-field>
+      
+        <mat-form-field>
+          <input matInput placeholder="Centro costos" [(ngModel)]="proyecto.centroCostos" name="centro">
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-select placeholder="Rol" [(ngModel)]="proyecto.rolProyecto" name="rol">
+            <mat-option value="Lider">Lider investigación</mat-option>
+            <mat-option value="Asist">Asistente investigación</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div *ngIf="proyecto.actividadesProyecto?.length else elseTemplate">
+      <div *ngFor="let actividad of proyecto.actividadesProyecto">
+        <div class="grupo">
+          <div class="row">
+            <div class="col-md-3">
+              <label>Actividad</label>
+            </div>
+            <div class="col-md-6">
+              <label></label>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-1">
+              <button class="eliminar" (click)="eliminarActividad(actividad.idActividad)"><i
+                class="material-icons">delete</i></button>
+            </div>
+          </div>
+          <form>
+            <div class="row">
+              <div class="col-md-3"></div>
+              <div class="col-md-3">
+                <span>Nombre actividad:</span>
+              </div>
+              <div class="col-md-3">
+                <mat-form-field>
+                  <input matInput placeholder="Nombre actividad" name="actividad" [(ngModel)]="actividad.nombreActividad">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3"></div>
+              <div class="col-md-3">
+                <mat-label>Descripción actividad:</mat-label>
+              </div>
+              <div class="col-md-3">
+                <mat-form-field [floatLabel]="never">
+                  <textarea matInput placeholder="Descripción" name="descripcion" [(ngModel)]="actividad.descripcionActividad"></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3"></div>
+              <div class="col-md-3">
+                <mat-label>Duración en horas:</mat-label>
+              </div>
+              <div class="col-md-3">
+                <mat-form-field [floatLabel]="never">
+                  <input matInput placeholder="Duracion" name="duracion" [(ngModel)]="actividad.duracionHoras">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3"></div>
+              <div class="col-md-3">
+                <mat-label>Fecha de entrega:</mat-label>
+              </div>
+              <div class="col-md-3">
+                <mat-form-field>
+                  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <button class="btn btn-default" (click)="agregarActividad()">Adicionar actividad</button>
+        </div>
+      </div>
+    </div>
+    <ng-template #elseTemplate>
+      <div class="row">
+        <div class="col-md-3">
+          <button class="btn btn-default" (click)="agregarActividad()">Adicionar actividad</button>
+        </div>
+      </div>
+    </ng-template>
+  </mat-expansion-panel>
+</div>

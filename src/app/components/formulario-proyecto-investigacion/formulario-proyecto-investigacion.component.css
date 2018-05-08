@@ -1,0 +1,24 @@
+* {
+    max-width: 740px;
+  }
+  .main{
+      min-height: 400px;
+      max-height: 400px;
+      background-color: white;
+  }
+  
+  .header {
+    margin-top: 2%;
+  }
+  
+  .header label {
+    margin-top: 8%;
+    font-size: 15px;
+  }
+  
+  .header button {
+    margin-top: 8%;
+    border-radius: 20px;
+  }
+  
+  

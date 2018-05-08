@@ -1,4 +1,4 @@
-import {Actividades} from './actividades';
+import {Actividad} from './actividad';
 import {RolProyecto} from './rol-proyecto';
 
 export class ProyectoInvestigacion {
@@ -6,6 +6,6 @@ export class ProyectoInvestigacion {
   nombreProyecto: string;
   tiempoTotal: number;
   centroCostos: string;
-  rolProyecto: RolProyecto;
-  actividadesProyecto: Actividades[];
+  rolProyecto: string;
+  actividadesProyecto: Actividad[];
 }

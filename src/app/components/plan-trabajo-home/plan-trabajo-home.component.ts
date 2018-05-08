@@ -12,7 +12,7 @@ import { PlanInvestigacion } from '../../models/plan-investigacion';
 export class PlanTrabajoHomeComponent implements OnInit {
 
   public pieChartLabels:string[] = ['Docencia', 'Investigación', 'Administración'];
-  public pieChartData:number[] = [200, 200, 100];
+  public pieChartData:number[];
   public pieChartType:string = 'pie';
 
   planesTrabajo: PlanTrabajo[];
@@ -36,18 +36,27 @@ export class PlanTrabajoHomeComponent implements OnInit {
 
   constructor() { 
     this.planesTrabajo = [];
+    this.inicializarPlan();
+  }
+
+  inicializarPlan(){
     this.planTrabajo = new PlanTrabajo()
     this.planTrabajo.planDocencia = new PlanDocencia();
+    this.planTrabajo.planDocencia.totalHoras = 220;
     this.planTrabajo.planAdministracion = new PlanAdministracion();
+    this.planTrabajo.planAdministracion.horasDedicadas = 240;
     this.planTrabajo.planInvestigacion = new PlanInvestigacion();
+    this.planTrabajo.planInvestigacion.horasDedicadas = 300;
     this.planTrabajo.fechaInicio = new Date();
     this.planTrabajo.fechaFin = new Date();
   }
 
   agregarPlan():void{
     let plan = new PlanTrabajo();
-    this.planTrabajo = plan;
+    plan = this.planTrabajo;
     this.planesTrabajo.push(plan);
+    this.pieChartData = this.distribucion(plan);
+    this.inicializarPlan();
   }
 
   distribucion(plan:PlanTrabajo):number[]{

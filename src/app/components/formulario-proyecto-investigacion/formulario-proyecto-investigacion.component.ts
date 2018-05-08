@@ -18,7 +18,7 @@ export class FormularioProyectoInvestigacionComponent implements OnInit {
 
   agregarProyecto() {
     let p = new ProyectoInvestigacion;
-   
+    p.nombreProyecto = this.proyecto.nombreProyecto
     this.proyectos.push(p);
     this.proyecto = new ProyectoInvestigacion();
   }
