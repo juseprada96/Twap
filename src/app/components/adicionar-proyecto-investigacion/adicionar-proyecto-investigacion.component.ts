@@ -1,6 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { ProyectoInvestigacion } from '../../models/proyecto-investigacion';
-import { Actividad } from '../../models/actividad';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {ProyectoInvestigacion} from '../../models/proyecto-investigacion';
+import {Actividad} from '../../models/actividad';
 
 @Component({
   selector: 'app-adicionar-proyecto-investigacion',

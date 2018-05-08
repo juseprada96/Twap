@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ActividadAdministracion} from '../../models/actividad-administracion';
 
 
@@ -46,7 +46,7 @@ export class FormularioLaboresComponent implements OnInit {
     horasActividadAdmon: 220
   };
 
- @Input() laboresAgregadas: ActividadAdministracion[];
+  @Input() laboresAgregadas: ActividadAdministracion[];
   listaLabores: ActividadAdministracion[];
 
   constructor() {

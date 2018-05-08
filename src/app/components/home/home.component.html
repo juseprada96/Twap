@@ -1,31 +1,43 @@
 <div class="row">
-<mat-sidenav-container class="example-container">
+  <mat-sidenav-container class="example-container">
     <mat-sidenav mode="side" opened class="size">
       <div class="menu-container">
         <div class="fill"></div>
-      <a><div class="row menu-item"><i class="material-icons icon">home</i><span>Home</span></div></a>
-      <a><div class="row menu-item"><i class="material-icons icon">assignment</i><span>Trabajos</span></div></a>
-      <a><div class="row menu-item"><i class="material-icons icon">date_range</i><span>Calendario</span></div></a>
-      <a><div class="row menu-item"><i class="material-icons icon">dashboard</i><span>Horario</span></div></a>
-      <a><div class="row menu-item"><i class="material-icons icon">description</i><span>Plan de Trabajo</span></div></a>
-      <a><div class="row menu-item"><i class="material-icons icon">settings</i><span>Configuracion</span></div></a>
-    </div>
+        <a>
+          <div class="row menu-item"><i class="material-icons icon">home</i><span>Home</span></div>
+        </a>
+        <a>
+          <div class="row menu-item"><i class="material-icons icon">assignment</i><span>Trabajos</span></div>
+        </a>
+        <a>
+          <div class="row menu-item"><i class="material-icons icon">date_range</i><span>Calendario</span></div>
+        </a>
+        <a>
+          <div class="row menu-item"><i class="material-icons icon">dashboard</i><span>Horario</span></div>
+        </a>
+        <a>
+          <div class="row menu-item"><i class="material-icons icon">description</i><span>Plan de Trabajo</span></div>
+        </a>
+        <a>
+          <div class="row menu-item"><i class="material-icons icon">settings</i><span>Configuracion</span></div>
+        </a>
+      </div>
     </mat-sidenav>
-    <mat-sidenav-content class="overflow" >
+    <mat-sidenav-content class="overflow">
       <div class="row">
-      <mat-toolbar class ="header">
-        <div class="row">
-          <div class="col-md-6"></div>
-          <div class="col-md-6">
+        <mat-toolbar class="header">
+          <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
               <i class="material-icons icon">search</i>
               <mat-form-field class="example-full-width">
-                 <input matInput placeholder="Buscar">
-                </mat-form-field>
+                <input matInput placeholder="Buscar">
+              </mat-form-field>
+            </div>
           </div>
-        </div>
-      </mat-toolbar>
-    </div>
-    <app-plan-trabajo-home></app-plan-trabajo-home>
+        </mat-toolbar>
+      </div>
+      <app-plan-trabajo-home></app-plan-trabajo-home>
     </mat-sidenav-content>
-</mat-sidenav-container>
+  </mat-sidenav-container>
 </div>

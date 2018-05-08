@@ -1,10 +1,12 @@
 <div class="container main">
   <mat-tab-group>
     <mat-tab label="Labores">
-      <app-formulario-labores [laboresAgregadas]="planAdministracion.actividadesAdministracion"></app-formulario-labores>
+      <app-formulario-labores
+        [laboresAgregadas]="planAdministracion.actividadesAdministracion"></app-formulario-labores>
     </mat-tab>
     <mat-tab label="Otras labores adiminstrativas">
-      <app-formulario-otras-labores [otrasLaboresAgregadas]="planAdministracion.otrasActividadesAdministracion"></app-formulario-otras-labores>
+      <app-formulario-otras-labores
+        [otrasLaboresAgregadas]="planAdministracion.otrasActividadesAdministracion"></app-formulario-otras-labores>
     </mat-tab>
 
   </mat-tab-group>

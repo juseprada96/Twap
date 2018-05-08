@@ -1,5 +1,5 @@
-import {Component, OnInit, Input} from '@angular/core';
-import { PlanAdministracion } from '../../models/plan-administracion';
+import {Component, Input, OnInit} from '@angular/core';
+import {PlanAdministracion} from '../../models/plan-administracion';
 
 @Component({
   selector: 'app-formulario-labores-administrativas',

@@ -1,28 +1,28 @@
 <div class="row">
-    <div class="col-md-6" *ngFor="let plan of planesTrabajo">
-      <mat-card class="card">
-        <mat-card-title>Plan de trabajo {{plan.idPlanTrabajo}}</mat-card-title>
-        <mat-card-content>
-            <div style="display: block">
-                <canvas baseChart
-                        [data]="pieChartData"
-                        [labels]="pieChartLabels"
-                        [chartType]="pieChartType"
-                        (chartHover)="chartHovered($event)"
-                        (chartClick)="chartClicked($event)"></canvas>
-              </div>
-        </mat-card-content>
-        <mat-card-actions>
-          <button class="btn btn-default" (click)= "seleccionarPlan(plan);modal2.show()">Ver</button>
-        </mat-card-actions>
-      </mat-card>
-    </div>
-    <a (click)="modal.show()" >
+  <div class="col-md-6" *ngFor="let plan of planesTrabajo">
+    <mat-card class="card">
+      <mat-card-title>Plan de trabajo {{plan.idPlanTrabajo}}</mat-card-title>
+      <mat-card-content>
+        <div style="display: block">
+          <canvas baseChart
+                  [data]="pieChartData"
+                  [labels]="pieChartLabels"
+                  [chartType]="pieChartType"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)"></canvas>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button class="btn btn-default" (click)="seleccionarPlan(plan);modal2.show()">Ver</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <a (click)="modal.show()">
     <div class="float">
-     <i class="material-icons">note_add</i>
+      <i class="material-icons">note_add</i>
     </div>
   </a>
-  </div>
+</div>
 
 <!-- Modal -->
 <app-modal #modal>
@@ -30,7 +30,7 @@
     Plan de trabajo
   </div>
   <div class="app-modal-body">
-    <app-formulario-plan-trabajo [planTrabajo] = "planTrabajo"></app-formulario-plan-trabajo>
+    <app-formulario-plan-trabajo [planTrabajo]="planTrabajo"></app-formulario-plan-trabajo>
   </div>
   <div class="app-modal-footer">
     <button type="button" class="btn btn-default" (click)="modal.hide()">Cancelar</button>
@@ -40,14 +40,14 @@
 
 
 <app-modal #modal2>
-    <div class="app-modal-header">
-      Plan de trabajo
-    </div>
-    <div class="app-modal-body">
-      <app-formulario-plan-trabajo [planTrabajo] = "planTrabajo"></app-formulario-plan-trabajo>
-    </div>
-    <div class="app-modal-footer">
-      <button type="button" class="btn btn-default" (click)="modal2.hide()">Cancelar</button>
-      <button type="button" class="btn btn-primary" (click)="agregarPlan()" disabled>Guardar plan</button>
-    </div>
-  </app-modal>
+  <div class="app-modal-header">
+    Plan de trabajo
+  </div>
+  <div class="app-modal-body">
+    <app-formulario-plan-trabajo [planTrabajo]="planTrabajo"></app-formulario-plan-trabajo>
+  </div>
+  <div class="app-modal-footer">
+    <button type="button" class="btn btn-default" (click)="modal2.hide()">Cancelar</button>
+    <button type="button" class="btn btn-primary" (click)="agregarPlan()" disabled>Guardar plan</button>
+  </div>
+</app-modal>

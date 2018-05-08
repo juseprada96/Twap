@@ -1,59 +1,64 @@
 .example-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #eee;
-  }
-
-  
-  .menu-item{
-      padding-left: 10%;
-      max-width: 210px;
-      min-height: 100px;
-      padding-top: 20%;
-      margin: 0px !important;
-  }
-  .menu-item:hover{
-    background-color: #2ac8f1;
-  }
-  .menu-item span{
-      vertical-align: middle;
-      padding-left: 5%;
-  }
-  .size{
-    background-color: #f9f9f9;
-      min-width: 210px;
-      box-shadow: 5px;
-      box-shadow: 2px 100px #888888;
-      position: fixed;
-  }
-  .fill{
-      min-height: 100px;
-      background-color: #72d6f0;
-  }
-
-  .header{
-      min-height: 100px;
-      width: 100%;
-      box-shadow: 1px 1px #888888;
-      background-color: #f9f9f9;
-      position: fixed;
-      z-index: 1000;
-  }
-
-  .icon{
-      vertical-align: middle;
-  }
-a{
-    text-decoration: none;
-    color: black;
-}
-a:hover{
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
 }
 
-.overflow{
-    overflow: auto;
+.menu-item {
+  padding-left: 10%;
+  max-width: 210px;
+  min-height: 100px;
+  padding-top: 20%;
+  margin: 0px !important;
+}
+
+.menu-item:hover {
+  background-color: #2ac8f1;
+}
+
+.menu-item span {
+  vertical-align: middle;
+  padding-left: 5%;
+}
+
+.size {
+  background-color: #f9f9f9;
+  min-width: 210px;
+  box-shadow: 5px;
+  box-shadow: 2px 100px #888888;
+  position: fixed;
+}
+
+.fill {
+  min-height: 100px;
+  background-color: #72d6f0;
+}
+
+.header {
+  min-height: 100px;
+  width: 100%;
+  box-shadow: 1px 1px #888888;
+  background-color: #f9f9f9;
+  position: fixed;
+  z-index: 1000;
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.overflow {
+  overflow: auto;
 }

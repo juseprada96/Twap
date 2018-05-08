@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { ProyectoInvestigacion } from '../../models/proyecto-investigacion';
+import {Component, Input, OnInit} from '@angular/core';
+import {ProyectoInvestigacion} from '../../models/proyecto-investigacion';
 
 @Component({
   selector: 'app-formulario-proyecto-investigacion',
@@ -17,13 +17,13 @@ export class FormularioProyectoInvestigacionComponent implements OnInit {
 
   agregarProyecto() {
     let p = new ProyectoInvestigacion;
-    p.nombreProyecto = this.proyecto.nombreProyecto
+    p.nombreProyecto = this.proyecto.nombreProyecto;
     this.proyectos.push(p);
     this.proyecto = new ProyectoInvestigacion();
   }
 
   eliminarProyecto(event: ProyectoInvestigacion) {
-    
+
     let index = this.proyectos.findIndex(proyecto => proyecto == event);
     this.proyectos.splice(index, 1);
   }

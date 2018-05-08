@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { PlanInvestigacion } from '../../models/plan-investigacion';
+import {Component, Input, OnInit} from '@angular/core';
+import {PlanInvestigacion} from '../../models/plan-investigacion';
 
 @Component({
   selector: 'app-formulario-investigacion',
@@ -8,9 +8,10 @@ import { PlanInvestigacion } from '../../models/plan-investigacion';
 })
 export class FormularioInvestigacionComponent implements OnInit {
 
-  @Input() planInvestigacion: PlanInvestigacion 
+  @Input() planInvestigacion: PlanInvestigacion;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     this.planInvestigacion.propuestaInvestagacion = [];

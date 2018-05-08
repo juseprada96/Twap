@@ -1,5 +1,4 @@
 import {Actividad} from './actividad';
-import {RolProyecto} from './rol-proyecto';
 
 export class ProyectoInvestigacion {
   idProyectoInvestigacion: string;

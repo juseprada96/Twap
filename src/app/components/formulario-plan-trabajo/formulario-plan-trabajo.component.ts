@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { PlanTrabajo } from '../../models/plan-trabajo';
+import {Component, Input, OnInit} from '@angular/core';
+import {PlanTrabajo} from '../../models/plan-trabajo';
 
 @Component({
   selector: 'app-formulario-plan-trabajo',
@@ -12,8 +12,8 @@ export class FormularioPlanTrabajoComponent implements OnInit {
 
 
   constructor() {
-    
-   }
+
+  }
 
   ngOnInit() {
   }

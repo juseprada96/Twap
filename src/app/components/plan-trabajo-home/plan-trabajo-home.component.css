@@ -1,26 +1,29 @@
-.card{
-    margin: 5%;
-}
-.row{
-position: relative;
-top: 6em;
+.card {
+  margin: 5%;
 }
 
-.float{
-    font-size: 30px;
-    position: absolute;
-    top: 18em;
-    left: 38em;
-    z-index: 1200;
-    background-color: #6ed8f4;
-    height: 2em;
-    width: 2em;
-    border-radius: 50%;
-    box-shadow: 3px 2px #8888;
+.row {
+  position: relative;
+  top: 6em;
 }
-.float:hover{
-    cursor: pointer;
+
+.float {
+  font-size: 30px;
+  position: absolute;
+  top: 18em;
+  left: 38em;
+  z-index: 1200;
+  background-color: #6ed8f4;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  box-shadow: 3px 2px #8888;
 }
+
+.float:hover {
+  cursor: pointer;
+}
+
 .float i {
-    padding: 0.8em;
+  padding: 0.8em;
 }

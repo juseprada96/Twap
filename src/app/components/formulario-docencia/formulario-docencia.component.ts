@@ -18,10 +18,10 @@ export class FormularioDocenciaComponent implements OnInit {
     this.planDocencia.semilleros = [];
     this.planDocencia.totalHoras = 320;
   }
-  
+
   constructor() {
-   
+
   }
- 
+
 
 }

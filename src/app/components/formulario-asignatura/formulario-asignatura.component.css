@@ -1,10 +1,11 @@
 * {
   max-width: 740px;
 }
-.main{
-    min-height: 400px;
-    max-height: 400px;
-    background-color: white;
+
+.main {
+  min-height: 400px;
+  max-height: 400px;
+  background-color: white;
 }
 
 .header {

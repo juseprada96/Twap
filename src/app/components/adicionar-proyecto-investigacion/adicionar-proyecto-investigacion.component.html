@@ -14,11 +14,11 @@
         <mat-form-field>
           <input matInput placeholder="Tiempo total estimado" [(ngModel)]="proyecto.tiempoTotal" name="tiempo">
         </mat-form-field>
-      
+
         <mat-form-field>
           <input matInput placeholder="Centro costos" [(ngModel)]="proyecto.centroCostos" name="centro">
         </mat-form-field>
-      
+
         <mat-form-field>
           <mat-select placeholder="Rol" [(ngModel)]="proyecto.rolProyecto" name="rol">
             <mat-option value="Lider">Lider investigación</mat-option>
@@ -51,7 +51,8 @@
               </div>
               <div class="col-md-3">
                 <mat-form-field>
-                  <input matInput placeholder="Nombre actividad" name="actividad" [(ngModel)]="actividad.nombreActividad">
+                  <input matInput placeholder="Nombre actividad" name="actividad"
+                         [(ngModel)]="actividad.nombreActividad">
                 </mat-form-field>
               </div>
             </div>
@@ -62,7 +63,8 @@
               </div>
               <div class="col-md-3">
                 <mat-form-field [floatLabel]="never">
-                  <textarea matInput placeholder="Descripción" name="descripcion" [(ngModel)]="actividad.descripcionActividad"></textarea>
+                  <textarea matInput placeholder="Descripción" name="descripcion"
+                            [(ngModel)]="actividad.descripcionActividad"></textarea>
                 </mat-form-field>
               </div>
             </div>

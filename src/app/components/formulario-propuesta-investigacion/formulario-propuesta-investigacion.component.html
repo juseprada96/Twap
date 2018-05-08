@@ -1,25 +1,24 @@
 <div class="container main">
-    <div class="row header">
-  
-      <form class="" (ngSubmit)="agregarPropuesta()">
-        <div class="col-md-3">
-          <label>Propuesta</label>
-        </div>
-        <div class="col-md-4">
-          <mat-form-field class="">
-            <input type="text" placeholder="Nombre" name="nombrePropuesta" aria-label="Number" matInput
-                  [(ngModel)] = "propuesta.nombrePropuesta" >
-          </mat-form-field>
-        </div>
-        <div class="col-md-2"></div>
-        <div class="col-md-2">
-          <button type="submit" class="btn btn-primary">Agregar propuesta</button>
-        </div>
-      </form>
-    </div>
-    <div *ngFor="let propuesta of propuestas">
-      <app-adicionar-propuesta (eventoEliminar)="eliminarPropuesta($event)"
-                               [propuesta]="propuesta"></app-adicionar-propuesta>
-    </div>
+  <div class="row header">
+
+    <form class="" (ngSubmit)="agregarPropuesta()">
+      <div class="col-md-3">
+        <label>Propuesta</label>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field class="">
+          <input type="text" placeholder="Nombre" name="nombrePropuesta" aria-label="Number" matInput
+                 [(ngModel)]="propuesta.nombrePropuesta">
+        </mat-form-field>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-primary">Agregar propuesta</button>
+      </div>
+    </form>
   </div>
-  
+  <div *ngFor="let propuesta of propuestas">
+    <app-adicionar-propuesta (eventoEliminar)="eliminarPropuesta($event)"
+                             [propuesta]="propuesta"></app-adicionar-propuesta>
+  </div>
+</div>

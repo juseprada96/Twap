@@ -1,5 +1,5 @@
-import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
-import { PropuestaInvestigacion } from '../../models/propuesta-investigacion';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {PropuestaInvestigacion} from '../../models/propuesta-investigacion';
 
 
 @Component({
