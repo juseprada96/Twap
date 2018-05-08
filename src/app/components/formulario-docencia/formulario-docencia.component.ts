@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { PlanDocencia } from '../../models/plan-docencia';
 
 @Component({
@@ -8,10 +8,13 @@ import { PlanDocencia } from '../../models/plan-docencia';
 })
 export class FormularioDocenciaComponent implements OnInit {
 
-  planDocencia: PlanDocencia;
+ @Input() planDocencia: PlanDocencia;
 
   constructor() { 
-    this.planDocencia = new PlanDocencia();
+   
+  }
+
+  ngOnInit() {
     this.planDocencia.asignaturas = [];
     this.planDocencia.proyectosUno = [];
     this.planDocencia.proyectosDos = [];
@@ -19,10 +22,6 @@ export class FormularioDocenciaComponent implements OnInit {
     this.planDocencia.totalHoras = 320;
   }
 
-  ngOnInit() {
-  }
-
   guardar(){
-    let p = PlanDocencia
   }
 }

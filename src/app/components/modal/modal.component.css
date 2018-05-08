@@ -1,0 +1,10 @@
+.modal {
+    background: rgba(0,0,0,0.6);
+  }
+.modal-content{
+  min-width: 800px;
+  overflow: auto;
+}
+.modal-body{
+  overflow: auto;
+}

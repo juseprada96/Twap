@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-6" *ngFor="let plan of planesTrabajo">
+      <mat-card class="card">
+        <mat-card-title>Plan de trabajo {{plan.idPlanTrabajo}}</mat-card-title>
+        <mat-card-content>
+            <div style="display: block">
+                <canvas baseChart
+                        [data]="distribucion(plan)"
+                        [labels]="pieChartLabels"
+                        [chartType]="pieChartType"
+                        (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)"></canvas>
+              </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button class="btn btn-default">Ver</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <a (click)="modal.show()" >
+    <div class="float">
+     <i class="material-icons">note_add</i>
+    </div>
+  </a>
+  </div>
+
+<!-- Modal -->
+<app-modal #modal>
+  <div class="app-modal-header">
+    Plan de trabajo
+  </div>
+  <div class="app-modal-body">
+    <app-formulario-plan-trabajo [planTrabajo] = "planTrabajo"></app-formulario-plan-trabajo>
+  </div>
+  <div class="app-modal-footer">
+    <button type="button" class="btn btn-default" (click)="modal.hide()">Cancelar</button>
+    <button type="button" class="btn btn-primary" (click)="agregarPlan()">Guardar plan</button>
+  </div>
+</app-modal>

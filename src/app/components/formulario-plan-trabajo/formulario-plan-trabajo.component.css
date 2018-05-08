@@ -1,4 +1,5 @@
 .main{
+    height: 100%;
     max-width: 760px;
     background-color: white;
 }
@@ -12,4 +13,15 @@
     margin-top: 10%;
     padding-left: 15%;
     padding-right: 15%;
+}
+
+.contenido{
+    max-height: 400px;
+    min-height: 400px;
+    max-width: 600px;
+    overflow-x: hidden;
+}
+
+.contenido label{
+    vertical-align: middle;
 }
