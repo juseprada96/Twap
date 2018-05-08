@@ -1,0 +1,27 @@
+<div class="container main">
+  <div class="row header">
+
+    <form class="" (ngSubmit)="agregarLabor()">
+      <div class="col-md-3">
+        <label>Labor administrativa a agregar</label>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field>
+          <mat-select [(value)]="laborSeleccionada">
+            <mat-option *ngFor="let actividad of listaLabores" [value]="actividad">
+              {{actividad.nombreActividadAdmon}}
+            </mat-option>
+          </mat-select>
+
+        </mat-form-field>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-primary">Agregar labor</button>
+      </div>
+    </form>
+  </div>
+  <div *ngFor="let labor of laboresAgregadas">
+    <app-adicionar-labor [labor]="labor" (myevent)="eliminarLabor($event)"></app-adicionar-labor>
+  </div>
+</div>
