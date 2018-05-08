@@ -15,31 +15,18 @@ export class FormularioDocenciaComponent implements OnInit {
 
  @Input() planDocencia: PlanDocencia;
 
-<<<<<<< HEAD
-  constructor() { 
-   
-  }
 
   ngOnInit() {
-=======
-  constructor() {
     this.planDocencia = new PlanDocencia();
->>>>>>> 3d8a4151da5dd9eaa8adb19d8fb0d9eecaa9043c
     this.planDocencia.asignaturas = [];
     this.planDocencia.proyectosUno = [];
     this.planDocencia.proyectosDos = [];
     this.planDocencia.semilleros = [];
     this.planDocencia.totalHoras = 320;
   }
-
-<<<<<<< HEAD
-  guardar(){
-=======
-  ngOnInit() {
+  constructor() {
+    
   }
 
-  guardar() {
-    let p = PlanDocencia;
->>>>>>> 3d8a4151da5dd9eaa8adb19d8fb0d9eecaa9043c
-  }
+  
 }

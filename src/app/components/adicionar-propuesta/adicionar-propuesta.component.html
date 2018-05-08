@@ -1,0 +1,37 @@
+<div class="">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <span>{{propuesta.nombrePropuesta}}</span>
+        </mat-panel-title>
+        <mat-panel-description>
+          <span class="help-block"></span>
+          <button class="eliminar" (click)="eliminarPropuesta()"><i class="material-icons">delete</i></button>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="grupo">
+        <div class="row">
+          <div class="col-md-3">
+            <label>Propuesta:</label>
+          </div>
+          <div class="col-md-6">
+            <label></label>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+        <form>
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+              <span>Descripcion:</span>
+            </div>
+            <div class="col-md-3">
+              <mat-form-field>
+                <textarea matInput placeholder="Descripcion proyecto" name="centro" [(ngModel)]="propuesta.descripcionPropuesta"></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+        </form>
+      </div>
+    </mat-expansion-panel>
+  </div>

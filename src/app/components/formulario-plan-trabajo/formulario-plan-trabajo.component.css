@@ -16,6 +16,7 @@
 }
 
 .contenido{
+    margin: 0px;
     max-height: 400px;
     min-height: 400px;
     max-width: 600px;
@@ -25,3 +26,4 @@
 .contenido label{
     vertical-align: middle;
 }
+

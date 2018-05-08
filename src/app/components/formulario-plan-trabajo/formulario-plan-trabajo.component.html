@@ -3,6 +3,7 @@
   <mat-tab-group>
       <mat-tab  label="Información del plan">
         <div class="row contenido">
+          <div class="row">
           <div class="col-md-3">
           <label>Periodo:</label>
         </div>
@@ -11,13 +12,38 @@
                 <input matInput placeholder="Periodo"  name="centro">
               </mat-form-field>
         </div>
+      </div>
+        <div class="row">
+          <div class="col-md-3">
+          <label>Fecha inicio:</label>
+          </div>
+          <div class="col-md-3">
+           <mat-form-field>
+              <input matInput [matDatepicker]="picker" placeholder="Fecha">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
         </div>
+        <div class="row">
+            <div class="col-md-3">
+            <label>Fecha fin:</label>
+            </div>
+            <div class="col-md-3">
+             <mat-form-field>
+                <input matInput [matDatepicker]="picker2" placeholder="Fecha">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </div>
+      </div>
       </mat-tab>
       <mat-tab label="Plan de docencia">
           <app-formulario-docencia [planDocencia] = "planTrabajo.planDocencia"></app-formulario-docencia>
       </mat-tab>
       <mat-tab label="Plan de investigación">
-          Some
+          <app-formulario-investigacion></app-formulario-investigacion>
         </mat-tab>
         <mat-tab label="Plan de administración">
             <app-formulario-labores-administrativas></app-formulario-labores-administrativas>

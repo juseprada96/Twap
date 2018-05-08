@@ -14,6 +14,7 @@ import { ChartsModule } from 'ng2-charts';
 import { PlanTrabajoHomeComponent } from './components/plan-trabajo-home/plan-trabajo-home.component';
 import { FormularioPlanTrabajoComponent } from './components/formulario-plan-trabajo/formulario-plan-trabajo.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { MatNativeDateModule } from '@angular/material/';
 
 
 
@@ -46,6 +47,13 @@ import {MatSelectModule} from '@angular/material/select';
 import {AdicionarLaborComponent} from './components/adicionar-labor/adicionar-labor.component';
 import {MatIconModule} from '@angular/material/icon';
 import {AdicionarOtraLaborComponent} from './components/adicionar-otra-labor/adicionar-otra-labor.component';
+import { FormularioInvestigacionComponent } from './components/formulario-investigacion/formulario-investigacion.component';
+import { FormularioPropuestaInvestigacionComponent } from './components/formulario-propuesta-investigacion/formulario-propuesta-investigacion.component';
+import { AdicionarPropuestaComponent } from './components/adicionar-propuesta/adicionar-propuesta.component';
+import { FormularioProyectoInvestigacionComponent } from './components/formulario-proyecto-investigacion/formulario-proyecto-investigacion.component';
+import { AdicionarProyectoInvestigacionComponent } from './components/adicionar-proyecto-investigacion/adicionar-proyecto-investigacion.component';
+import { FormularioInvestigadoresComponent } from './components/formulario-investigadores/formulario-investigadores.component';
+import { AdicionarProyectoInvestigadoresComponent } from './components/adicionar-proyecto-investigadores/adicionar-proyecto-investigadores.component';
 
 
 @NgModule({
@@ -66,7 +74,14 @@ import {AdicionarOtraLaborComponent} from './components/adicionar-otra-labor/adi
     FormularioLaboresComponent,
     FormularioOtrasLaboresComponent,
     AdicionarLaborComponent,
-    AdicionarOtraLaborComponent
+    AdicionarOtraLaborComponent,
+    FormularioInvestigacionComponent,
+    FormularioPropuestaInvestigacionComponent,
+    AdicionarPropuestaComponent,
+    FormularioProyectoInvestigacionComponent,
+    AdicionarProyectoInvestigacionComponent,
+    FormularioInvestigadoresComponent,
+    AdicionarProyectoInvestigadoresComponent
   ],
   imports: [
     BrowserModule,
@@ -87,6 +102,7 @@ import {AdicionarOtraLaborComponent} from './components/adicionar-otra-labor/adi
     RouterModule.forRoot(appRoutes, {enableTracing: true}),
     MatSelectModule,
     MatIconModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

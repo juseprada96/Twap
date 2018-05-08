@@ -1,0 +1,15 @@
+.main{
+    max-width: 760px;
+    background-color: white;
+}
+
+.bottom {
+  background-color: turquoise;
+  min-height: 100px;
+}
+
+.bottom button {
+  margin-top: 10%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
