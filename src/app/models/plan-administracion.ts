@@ -4,4 +4,5 @@ export class PlanAdministracion {
   idPlanAdministracion: string;
   horasDedicadas: number;
   actividadesAdministracion: ActividadAdministracion[];
+  otrasActividadesAdministracion: ActividadAdministracion[];
 }

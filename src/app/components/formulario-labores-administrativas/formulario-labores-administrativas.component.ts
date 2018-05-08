@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
+import { PlanAdministracion } from '../../models/plan-administracion';
 
 @Component({
   selector: 'app-formulario-labores-administrativas',
@@ -7,10 +8,14 @@ import {Component, OnInit} from '@angular/core';
 })
 export class FormularioLaboresAdministrativasComponent implements OnInit {
 
+  @Input() planAdministracion: PlanAdministracion;
+
   constructor() {
   }
 
   ngOnInit() {
+    this.planAdministracion.actividadesAdministracion = [];
+    this.planAdministracion.otrasActividadesAdministracion = [];
   }
 
 }

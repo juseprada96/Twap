@@ -34,7 +34,7 @@
   </div>
   <div class="app-modal-footer">
     <button type="button" class="btn btn-default" (click)="modal.hide()">Cancelar</button>
-    <button type="button" class="btn btn-primary" (click)="agregarPlan()">Guardar plan</button>
+    <button type="button" class="btn btn-primary" (click)="agregarPlan();modal.hide()">Guardar plan</button>
   </div>
 </app-modal>
 
@@ -48,6 +48,6 @@
     </div>
     <div class="app-modal-footer">
       <button type="button" class="btn btn-default" (click)="modal2.hide()">Cancelar</button>
-      <button type="button" class="btn btn-primary" (click)="agregarPlan()">Guardar plan</button>
+      <button type="button" class="btn btn-primary" (click)="agregarPlan()" disabled>Guardar plan</button>
     </div>
   </app-modal>
