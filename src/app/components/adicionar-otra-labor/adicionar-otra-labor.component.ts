@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {ActividadAdministracion} from '../../models/actividad-administracion';
 
 @Component({
   selector: 'app-adicionar-otra-labor',
@@ -7,10 +8,17 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AdicionarOtraLaborComponent implements OnInit {
 
+  @Input() otraLabor: ActividadAdministracion;
+  @Output() myEvent: EventEmitter<string> = new EventEmitter();
+
   constructor() {
   }
 
   ngOnInit() {
   }
 
+  lanzar(event) {
+    let id = this.otraLabor.idActividadAdmon;
+    this.myEvent.emit(id);
+  }
 }
