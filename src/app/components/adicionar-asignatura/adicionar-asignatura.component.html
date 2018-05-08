@@ -6,6 +6,7 @@
     </mat-panel-title>
     <mat-panel-description>
       <span class="help-block">Creditos: {{asignatura.creditos}} - Pregrado</span>
+      <button class="eliminar" (click) = "eliminarAsignatura()"><i class="material-icons">delete</i></button>
     </mat-panel-description>
   </mat-expansion-panel-header>
   <div *ngIf="asignatura.grupos?.length else elseTemplate">

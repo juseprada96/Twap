@@ -1,6 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgModule} from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './components/home/home.component';
 import {AdicionarAsignaturaComponent} from './components/adicionar-asignatura/adicionar-asignatura.component';
@@ -25,6 +26,18 @@ import {MatSelectModule} from '@angular/material/select';
 import {AdicionarLaborComponent} from './components/adicionar-labor/adicionar-labor.component';
 import {MatIconModule} from '@angular/material/icon';
 import {AdicionarOtraLaborComponent} from './components/adicionar-otra-labor/adicionar-otra-labor.component';
+
+const appRoutes : Routes = [
+{
+  path:'home', component: HomeComponent
+},
+{
+  path:'planDocencia', component: FormularioDocenciaComponent
+}
+{
+  path: '**', redirectTo: 'home'
+}
+]
 
 @NgModule({
   declarations: [
@@ -52,6 +65,7 @@ import {AdicionarOtraLaborComponent} from './components/adicionar-otra-labor/adi
     MatInputModule,
     MatExpansionModule,
     MatTabsModule,
+    RouterModule.forRoot(appRoutes,{enableTracing : true}),
     BrowserAnimationsModule,
     MatSelectModule,
     MatIconModule,

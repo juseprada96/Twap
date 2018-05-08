@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import {Asignatura} from '../../models/asignatura';
 import {Grupo} from '../../models/grupo';
 @Component({
@@ -9,6 +9,11 @@ import {Grupo} from '../../models/grupo';
 export class AdicionarAsignaturaComponent implements OnInit {
 
   @Input() asignatura : Asignatura;
+  @Output() eventoEliminar = new EventEmitter<Asignatura>()
+
+  eliminarAsignatura(){
+    this.eventoEliminar.emit(this.asignatura);
+  }
 
   /*asignatura: Asignatura = {
     idAsignatura: '1',
