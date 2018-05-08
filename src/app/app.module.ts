@@ -1,7 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgModule} from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './components/home/home.component';
 import {AdicionarAsignaturaComponent} from './components/adicionar-asignatura/adicionar-asignatura.component';
@@ -27,17 +27,17 @@ import {AdicionarLaborComponent} from './components/adicionar-labor/adicionar-la
 import {MatIconModule} from '@angular/material/icon';
 import {AdicionarOtraLaborComponent} from './components/adicionar-otra-labor/adicionar-otra-labor.component';
 
-const appRoutes : Routes = [
-{
-  path:'home', component: HomeComponent
-},
-{
-  path:'planDocencia', component: FormularioDocenciaComponent
-}
-{
-  path: '**', redirectTo: 'home'
-}
-]
+const appRoutes: Routes = [
+  {
+    path: 'home', component: HomeComponent
+  },
+  {
+    path: 'planDocencia', component: FormularioDocenciaComponent
+  },
+  {
+    path: '**', redirectTo: 'home'
+  }
+];
 
 @NgModule({
   declarations: [
@@ -65,7 +65,7 @@ const appRoutes : Routes = [
     MatInputModule,
     MatExpansionModule,
     MatTabsModule,
-    RouterModule.forRoot(appRoutes,{enableTracing : true}),
+    RouterModule.forRoot(appRoutes, {enableTracing: true}),
     BrowserAnimationsModule,
     MatSelectModule,
     MatIconModule,
@@ -73,4 +73,5 @@ const appRoutes : Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
