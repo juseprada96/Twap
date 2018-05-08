@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import { Component, OnInit, Input } from '@angular/core';
-import { PlanDocencia } from '../../models/plan-docencia';
-=======
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {PlanDocencia} from '../../models/plan-docencia';
->>>>>>> 3d8a4151da5dd9eaa8adb19d8fb0d9eecaa9043c
 
 @Component({
   selector: 'app-formulario-docencia',
@@ -13,18 +8,13 @@ import {PlanDocencia} from '../../models/plan-docencia';
 })
 export class FormularioDocenciaComponent implements OnInit {
 
- @Input() planDocencia: PlanDocencia;
-
-<<<<<<< HEAD
-  constructor() { 
-   
-  }
+  @Input() planDocencia: PlanDocencia;
 
   ngOnInit() {
-=======
+  }
+
   constructor() {
     this.planDocencia = new PlanDocencia();
->>>>>>> 3d8a4151da5dd9eaa8adb19d8fb0d9eecaa9043c
     this.planDocencia.asignaturas = [];
     this.planDocencia.proyectosUno = [];
     this.planDocencia.proyectosDos = [];
@@ -32,14 +22,7 @@ export class FormularioDocenciaComponent implements OnInit {
     this.planDocencia.totalHoras = 320;
   }
 
-<<<<<<< HEAD
-  guardar(){
-=======
-  ngOnInit() {
-  }
-
   guardar() {
     let p = PlanDocencia;
->>>>>>> 3d8a4151da5dd9eaa8adb19d8fb0d9eecaa9043c
   }
 }
