@@ -1,18 +1,33 @@
 <div class="container main">
   <div class="row">
-<mat-tab-group>
-    <mat-tab  label="Materias a dictar">
-      <app-formulario-asignatura [materiasAgregadas] = "planDocencia.asignaturas"></app-formulario-asignatura>
-    </mat-tab>
-    <mat-tab label="Proyectos de grado 1">
-      <app-formulario-proyecto-grado [proyectos] = "planDocencia.proyectosUno" ></app-formulario-proyecto-grado>
-    </mat-tab>
-    <mat-tab label="Proyectos de grado 2">
-        <app-formulario-proyecto-grado [proyectos] = "planDocencia.proyectosDos"></app-formulario-proyecto-grado>
+    <mat-tab-group>
+      <mat-tab label="Materias a dictar">
+        <app-formulario-asignatura [materiasAgregadas]="planDocencia.asignaturas"></app-formulario-asignatura>
+      </mat-tab>
+      <mat-tab label="Proyectos de grado 1">
+        <app-formulario-proyecto-grado [proyectos]="planDocencia.proyectosUno"></app-formulario-proyecto-grado>
+      </mat-tab>
+      <mat-tab label="Proyectos de grado 2">
+        <app-formulario-proyecto-grado [proyectos]="planDocencia.proyectosDos"></app-formulario-proyecto-grado>
       </mat-tab>
       <mat-tab label="Semilleros">
+<<<<<<< HEAD
           <app-formulario-semillero [semilleros] = "planDocencia.semilleros"></app-formulario-semillero>
         </mat-tab>
   </mat-tab-group>
 </div>
 </div>
+=======
+        <app-formulario-semillero [semilleros]="planDocencia.semilleros"></app-formulario-semillero>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+  <div class="row bottom">
+    <div class="col-md-6"></div>
+    <div class="col-md-6">
+      <button class="btn btn-default">Cancelar</button>
+      <button class="btn btn-primary">Guardar</button>
+    </div>
+  </div>
+</div>
+>>>>>>> 3d8a4151da5dd9eaa8adb19d8fb0d9eecaa9043c

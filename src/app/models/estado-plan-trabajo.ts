@@ -1,5 +1,5 @@
 export class EstadoPlanTrabajo {
-    idEstadoPlan: string;
-    nombreEstadoPlan: string;
-    descripcionEstadoPlan: string;
+  idEstadoPlan: string;
+  nombreEstadoPlan: string;
+  descripcionEstadoPlan: string;
 }

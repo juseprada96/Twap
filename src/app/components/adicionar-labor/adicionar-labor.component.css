@@ -1,0 +1,17 @@
+.mat-expansion-panel-header-title,
+.mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+#horas {
+  width: 40%;
+}
+
+#eliminar {
+  padding-left: 70%;
+}

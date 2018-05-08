@@ -1,6 +1,7 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Asignatura} from '../../models/asignatura';
 import {Grupo} from '../../models/grupo';
+
 @Component({
   selector: 'app-adicionar-asignatura',
   templateUrl: './adicionar-asignatura.component.html',
@@ -8,10 +9,10 @@ import {Grupo} from '../../models/grupo';
 })
 export class AdicionarAsignaturaComponent implements OnInit {
 
-  @Input() asignatura : Asignatura;
-  @Output() eventoEliminar = new EventEmitter<Asignatura>()
+  @Input() asignatura: Asignatura;
+  @Output() eventoEliminar = new EventEmitter<Asignatura>();
 
-  eliminarAsignatura(){
+  eliminarAsignatura() {
     this.eventoEliminar.emit(this.asignatura);
   }
 
@@ -23,17 +24,19 @@ export class AdicionarAsignaturaComponent implements OnInit {
     numeroEstudiantes: 25
   }*/
 
-  agregarGrupo(){
+  agregarGrupo() {
     let g = new Grupo();
     g.numeroGrupo = this.asignatura.grupos.length + 1;
     this.asignatura.grupos.push(g);
   }
 
-  eliminarGrupo(numeroGrupo:number){
-    let index = this.asignatura.grupos.findIndex(grupo => grupo.numeroGrupo == numeroGrupo)
-    this.asignatura.grupos.splice(index,1);
+  eliminarGrupo(numeroGrupo: number) {
+    let index = this.asignatura.grupos.findIndex(grupo => grupo.numeroGrupo == numeroGrupo);
+    this.asignatura.grupos.splice(index, 1);
   }
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

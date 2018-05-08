@@ -1,5 +1,5 @@
 export class Grupo {
-    numerEstudiantes: number;
-    numeroHoras: number;
-    numeroGrupo: number;
+  numerEstudiantes: number;
+  numeroHoras: number;
+  numeroGrupo: number;
 }

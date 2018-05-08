@@ -1,23 +1,30 @@
-*{
-    max-width: 740px;
+* {
+  max-width: 740px;
 }
+<<<<<<< HEAD
 .main{
     min-height: 400px;
     max-height: 400px;
     background-color: white;
+=======
+
+.main {
+  min-height: 600px;
+  background-color: white;
+>>>>>>> 3d8a4151da5dd9eaa8adb19d8fb0d9eecaa9043c
 }
 
-.header{
-    margin-top: 2%;
+.header {
+  margin-top: 2%;
 }
 
-.header label{
-    margin-top: 8%;
-    font-size: 15px;
+.header label {
+  margin-top: 8%;
+  font-size: 15px;
 }
 
-.header button{
-    margin-top:  8%;
-    border-radius: 20px;
+.header button {
+  margin-top: 8%;
+  border-radius: 20px;
 }
 

@@ -1,5 +1,5 @@
 export class PropuestaInvestigacion {
-    idPropuestaInvestigacion: string;
-    nombrePropuesta: string;
-    fechaPresentacion: Date;
+  idPropuestaInvestigacion: string;
+  nombrePropuesta: string;
+  fechaPresentacion: Date;
 }

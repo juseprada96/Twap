@@ -1,5 +1,5 @@
 export class RolProyecto {
-    idRolProyecto: string;
-    nombreRolProyecto: string;
-    descripcionRolProyecto: string;
+  idRolProyecto: string;
+  nombreRolProyecto: string;
+  descripcionRolProyecto: string;
 }

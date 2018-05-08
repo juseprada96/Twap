@@ -1,7 +1,15 @@
-.eliminar{
-    background-color: white;
-    border: 0px;
+.eliminar {
+  background-color: white;
+  border: 0px;
 }
+
+.grupo {
+  margin-top: 2.5%;
+  padding-top: 2.5%;
+  border-top: solid 2px;
+  border-color: gray;
+}
+<<<<<<< HEAD
 .grupo{
     margin-top: 2.5%;
     padding-top: 2.5%;
@@ -12,3 +20,5 @@
 .control{
     overflow: auto;
 }
+=======
+>>>>>>> 3d8a4151da5dd9eaa8adb19d8fb0d9eecaa9043c

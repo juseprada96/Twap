@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { AdicionarSemilleroComponent } from './adicionar-semillero.component';
+import {AdicionarSemilleroComponent} from './adicionar-semillero.component';
 
 describe('AdicionarSemilleroComponent', () => {
   let component: AdicionarSemilleroComponent;
@@ -8,9 +8,9 @@ describe('AdicionarSemilleroComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdicionarSemilleroComponent ]
+      declarations: [AdicionarSemilleroComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

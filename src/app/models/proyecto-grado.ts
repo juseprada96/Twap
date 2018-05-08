@@ -1,7 +1,7 @@
-import { Estudiante } from "./estudiante";
+import {Estudiante} from './estudiante';
 
 export class ProyectoGrado {
-    nombre:string;
-    estudiantes: Estudiante[];
-    numeroProyecto: number;
+  nombre: string;
+  estudiantes: Estudiante[];
+  numeroProyecto: number;
 }
