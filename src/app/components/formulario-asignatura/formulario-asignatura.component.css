@@ -1,22 +1,23 @@
-*{
-    max-width: 740px;
-}
-.main{
-    min-height: 600px;
-    background-color: white;
+* {
+  max-width: 740px;
 }
 
-.header{
-    margin-top: 2%;
+.main {
+  min-height: 600px;
+  background-color: white;
 }
 
-.header label{
-    margin-top: 8%;
-    font-size: 15px;
+.header {
+  margin-top: 2%;
 }
 
-.header button{
-    margin-top:  8%;
-    border-radius: 20px;
+.header label {
+  margin-top: 8%;
+  font-size: 15px;
+}
+
+.header button {
+  margin-top: 8%;
+  border-radius: 20px;
 }
 

@@ -2,48 +2,47 @@
   <mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>
-          <span>{{semillero.nombreSemillero}}</span>
+        <span>{{semillero.nombreSemillero}}</span>
       </mat-panel-title>
       <mat-panel-description>
         <span class="help-block">Centro {{semillero.centroRegistro}}</span>
-        <button class="eliminar" (click) = "eliminarSemillero()"><i class="material-icons">delete</i></button>
+        <button class="eliminar" (click)="eliminarSemillero()"><i class="material-icons">delete</i></button>
       </mat-panel-description>
     </mat-expansion-panel-header>
-        <div class="grupo">
-    <div class="row">
-      <div class="col-md-3">
-      <label>Información:</label>
-    </div>
-    <div class="col-md-6">
-      <label></label>
-    </div>
-    <div class="col-md-2"></div>
-    </div>
-    <form>
-    <div class="row">
-        <div class="col-md-3"></div>
+    <div class="grupo">
+      <div class="row">
         <div class="col-md-3">
-      <span>Centro de registro:</span>
-    </div>
-        <div class="col-md-3">
+          <label>Información:</label>
+        </div>
+        <div class="col-md-6">
+          <label></label>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+      <form>
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-3">
+            <span>Centro de registro:</span>
+          </div>
+          <div class="col-md-3">
             <mat-form-field>
-                <input matInput placeholder="Centro de registro"  name="centro" [(ngModel)] = "semillero.centroRegistro">
-              </mat-form-field>
-    </div> 
-    </div>
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-3">
-      <span>Horas semanales:</span>
-    </div>
-        <div class="col-md-3">
+              <input matInput placeholder="Centro de registro" name="centro" [(ngModel)]="semillero.centroRegistro">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-3">
+            <span>Horas semanales:</span>
+          </div>
+          <div class="col-md-3">
             <mat-form-field [floatLabel]="never">
-                <input matInput placeholder="Horas"  name="horas" [(ngModel)] = "semillero.horas">
-              </mat-form-field>
-    </div> 
+              <input matInput placeholder="Horas" name="horas" [(ngModel)]="semillero.horas">
+            </mat-form-field>
+          </div>
+        </div>
+      </form>
     </div>
-    </form>
-  </div>
   </mat-expansion-panel>
-  </div>
-  
+</div>

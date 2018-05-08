@@ -1,5 +1,5 @@
 export class EstadoUsuario {
-    idEstadoUsuario: string;
-    nombreEstadoUsuario: string;
-    descripcionEstadoUsuario: string;
+  idEstadoUsuario: string;
+  nombreEstadoUsuario: string;
+  descripcionEstadoUsuario: string;
 }

@@ -1,22 +1,24 @@
 <div class="container main">
   <div class="row header">
-  
-  <form class="" (ngSubmit) = "agregarSemillero()">
-    <div class="col-md-3">
-    <label>Semilleros de investigación</label>
-    </div>
-    <div class="col-md-4">
-    <mat-form-field class="">
-      <input type="text" placeholder="Nombre" name="nombreSemillero" aria-label="Number" matInput  [(ngModel)] = "semillero.nombreSemillero" >
-    </mat-form-field>
-  </div>
-  <div class="col-md-2"></div>
-  <div class="col-md-2">
-    <button type="submit" class="btn btn-primary">Agregar semillero</button>
-  </div>
-  </form>
+
+    <form class="" (ngSubmit)="agregarSemillero()">
+      <div class="col-md-3">
+        <label>Semilleros de investigación</label>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field class="">
+          <input type="text" placeholder="Nombre" name="nombreSemillero" aria-label="Number" matInput
+                 [(ngModel)]="semillero.nombreSemillero">
+        </mat-form-field>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-primary">Agregar semillero</button>
+      </div>
+    </form>
   </div>
   <div *ngFor="let semillero of semilleros">
-  <app-adicionar-semillero (eventoEliminar)="eliminarSemillero($event)" [semillero]="semillero"></app-adicionar-semillero>
+    <app-adicionar-semillero (eventoEliminar)="eliminarSemillero($event)"
+                             [semillero]="semillero"></app-adicionar-semillero>
   </div>
-  </div>
+</div>

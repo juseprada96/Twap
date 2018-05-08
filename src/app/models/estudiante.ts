@@ -1,4 +1,4 @@
 export class Estudiante {
-    nombre:string;
-    codigo:string;
+  nombre: string;
+  codigo: string;
 }

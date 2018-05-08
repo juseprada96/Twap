@@ -1,5 +1,5 @@
 export class UsuarioRol {
-    idUsuarioRol: string;
-    nombreRol: string;
-    descripcionUsuarioRol: string;
+  idUsuarioRol: string;
+  nombreRol: string;
+  descripcionUsuarioRol: string;
 }

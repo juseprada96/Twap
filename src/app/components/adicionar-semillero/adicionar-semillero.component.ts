@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Semillero } from '../../models/semillero';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Semillero} from '../../models/semillero';
 
 @Component({
   selector: 'app-adicionar-semillero',
@@ -8,15 +8,15 @@ import { Semillero } from '../../models/semillero';
 })
 export class AdicionarSemilleroComponent implements OnInit {
 
-  @Input() semillero : Semillero;
+  @Input() semillero: Semillero;
 
-  @Output() eventoEliminar = new EventEmitter<Semillero>()
+  @Output() eventoEliminar = new EventEmitter<Semillero>();
 
-  eliminarSemillero(){
+  eliminarSemillero() {
     this.eventoEliminar.emit(this.semillero);
   }
 
-  constructor() { 
+  constructor() {
 
   }
 

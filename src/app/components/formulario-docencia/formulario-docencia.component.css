@@ -1,16 +1,16 @@
-.main{
-    height: 100%;
-    max-width: 760px;
-    background-color: white;
+.main {
+  height: 100%;
+  max-width: 760px;
+  background-color: white;
 }
 
-.bottom{
-    background-color: turquoise;
-    min-height: 100px;
+.bottom {
+  background-color: turquoise;
+  min-height: 100px;
 }
 
-.bottom button{
-    margin-top: 10%;
-    padding-left: 15%;
-    padding-right: 15%;
+.bottom button {
+  margin-top: 10%;
+  padding-left: 15%;
+  padding-right: 15%;
 }

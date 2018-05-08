@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ProyectoGrado } from '../../models/proyecto-grado';
+import {Component, Input, OnInit} from '@angular/core';
+import {ProyectoGrado} from '../../models/proyecto-grado';
 
 @Component({
   selector: 'app-formulario-proyecto-grado',
@@ -9,27 +9,27 @@ import { ProyectoGrado } from '../../models/proyecto-grado';
 export class FormularioProyectoGradoComponent implements OnInit {
 
 
-  @Input() proyectos: ProyectoGrado[]
+  @Input() proyectos: ProyectoGrado[];
   proyecto: ProyectoGrado;
 
-  constructor() { 
-    this.proyectos = []
+  constructor() {
+    this.proyectos = [];
     this.proyecto = new ProyectoGrado;
   }
 
-  agregarProyecto(){
+  agregarProyecto() {
     let p = new ProyectoGrado;
     p.nombre = this.proyecto.nombre;
-    p.numeroProyecto = this.proyectos.length +1;
-    p.estudiantes = []
+    p.numeroProyecto = this.proyectos.length + 1;
+    p.estudiantes = [];
     this.proyectos.push(p);
     this.proyecto = new ProyectoGrado();
   }
 
-  eliminarProyecto(event:ProyectoGrado){
-    console.log(event)
-    let index = this.proyectos.findIndex(proyecto=> proyecto.numeroProyecto == event.numeroProyecto)
-    this.proyectos.splice(index,1);
+  eliminarProyecto(event: ProyectoGrado) {
+    console.log(event);
+    let index = this.proyectos.findIndex(proyecto => proyecto.numeroProyecto == event.numeroProyecto);
+    this.proyectos.splice(index, 1);
   }
 
   ngOnInit() {

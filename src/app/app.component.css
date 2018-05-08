@@ -1,7 +1,8 @@
-*{
-    font-family: 'Roboto';
+* {
+  font-family: 'Roboto';
 }
-.back{
-    background-color: tan;
-    min-height: 760px;
+
+.back {
+  background-color: tan;
+  min-height: 760px;
 }

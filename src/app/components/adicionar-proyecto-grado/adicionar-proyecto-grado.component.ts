@@ -1,6 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { ProyectoGrado } from '../../models/proyecto-grado';
-import { Estudiante } from '../../models/estudiante';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {ProyectoGrado} from '../../models/proyecto-grado';
+import {Estudiante} from '../../models/estudiante';
 
 @Component({
   selector: 'app-adicionar-proyecto-grado',
@@ -9,25 +9,26 @@ import { Estudiante } from '../../models/estudiante';
 })
 export class AdicionarProyectoGradoComponent implements OnInit {
 
-  
-  @Input() proyecto : ProyectoGrado;
 
-  @Output() eventoEliminar = new EventEmitter<ProyectoGrado>()
+  @Input() proyecto: ProyectoGrado;
 
-  eliminarProyecto(){
+  @Output() eventoEliminar = new EventEmitter<ProyectoGrado>();
+
+  eliminarProyecto() {
     this.eventoEliminar.emit(this.proyecto);
   }
 
-  agregarEstudiante(){
-    let e = new Estudiante()
+  agregarEstudiante() {
+    let e = new Estudiante();
     this.proyecto.estudiantes.push(e);
   }
 
-  eliminarEstudiante(codigo:string){
-    let index = this.proyecto.estudiantes.findIndex(estudiante => estudiante.codigo == codigo)
-    this.proyecto.estudiantes.splice(index,1);
+  eliminarEstudiante(codigo: string) {
+    let index = this.proyecto.estudiantes.findIndex(estudiante => estudiante.codigo == codigo);
+    this.proyecto.estudiantes.splice(index, 1);
   }
-  constructor() { 
+
+  constructor() {
 
   }
 
