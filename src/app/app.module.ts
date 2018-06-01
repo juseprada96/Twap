@@ -40,6 +40,8 @@ import {FormularioProyectoInvestigacionComponent} from './components/formulario-
 import {AdicionarProyectoInvestigacionComponent} from './components/adicionar-proyecto-investigacion/adicionar-proyecto-investigacion.component';
 import {FormularioInvestigadoresComponent} from './components/formulario-investigadores/formulario-investigadores.component';
 import {AdicionarProyectoInvestigadoresComponent} from './components/adicionar-proyecto-investigadores/adicionar-proyecto-investigadores.component';
+import { AdicionarJovenInvestigadorComponent } from './components/adicionar-joven-investigador/adicionar-joven-investigador.component';
+import { FormularioJovenInvestigadorComponent } from './components/formulario-joven-investigador/formulario-joven-investigador.component';
 
 
 const appRoutes: Routes = [
@@ -80,7 +82,9 @@ const appRoutes: Routes = [
     FormularioProyectoInvestigacionComponent,
     AdicionarProyectoInvestigacionComponent,
     FormularioInvestigadoresComponent,
-    AdicionarProyectoInvestigadoresComponent
+    AdicionarProyectoInvestigadoresComponent,
+    AdicionarJovenInvestigadorComponent,
+    FormularioJovenInvestigadorComponent
   ],
   imports: [
     BrowserModule,
@@ -98,7 +102,6 @@ const appRoutes: Routes = [
     ChartsModule,
     MatDatepickerModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes, {enableTracing: true}),
     MatSelectModule,
     MatIconModule,
     MatNativeDateModule

@@ -20,9 +20,11 @@ export class FormularioOtrasLaboresComponent implements OnInit {
   }
 
   agregarLabor() {
-    if (this.otraLabor.nombreActividadAdmon.trim() !== '') {
+    if (this.otraLabor.nombreActividadAdmon.trim()) {
       this.otraLabor.idActividadAdmon = (this.otrasLaboresAgregadas.length + 1) + '';
-      this.otrasLaboresAgregadas.push(this.otraLabor);
+      let otra = new ActividadAdministracion();
+      otra.nombreActividadAdmon = this.otraLabor.nombreActividadAdmon;
+      this.otrasLaboresAgregadas.push(otra);
     } else {
       alert('Escriba el nombre de la labor');
     }

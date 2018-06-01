@@ -16,10 +16,14 @@ export class FormularioProyectoInvestigacionComponent implements OnInit {
   }
 
   agregarProyecto() {
+    if(this.proyecto.nombreProyecto.trim()){
     let p = new ProyectoInvestigacion;
     p.nombreProyecto = this.proyecto.nombreProyecto;
     this.proyectos.push(p);
     this.proyecto = new ProyectoInvestigacion();
+    } else {
+      alert("El nombre no puede ser vacio")
+    }
   }
 
   eliminarProyecto(event: ProyectoInvestigacion) {

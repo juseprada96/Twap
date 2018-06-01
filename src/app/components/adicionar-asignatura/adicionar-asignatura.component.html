@@ -36,7 +36,7 @@
               <div class="col-md-3"></div>
               <div class="col-md-3">
                 <mat-form-field>
-                  <input matInput placeholder="Numero estudiantes" [(ngModel)]="grupo.numeroEstudiantes"
+                  <input type="number" matInput placeholder="Numero estudiantes" [(ngModel)]="grupo.numeroEstudiantes"
                          name="estudiantes">
                 </mat-form-field>
               </div>
@@ -51,7 +51,7 @@
               <div class="col-md-3"></div>
               <div class="col-md-3">
                 <mat-form-field [floatLabel]="never">
-                  <input matInput placeholder="Numero horas semanales" [(ngModel)]="grupo.numeroHoras" name="horas">
+                  <input type="number" matInput placeholder="Numero horas semanales" [(ngModel)]="grupo.numeroHoras" name="horas">
                 </mat-form-field>
               </div>
             </div>

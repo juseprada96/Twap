@@ -17,6 +17,7 @@ export class FormularioSemilleroComponent implements OnInit {
   }
 
   agregarSemillero() {
+    if(this.semillero.nombreSemillero.trim()){
     let s = new Semillero();
     s.nombreSemillero = this.semillero.nombreSemillero;
     s.horas = this.semillero.horas;
@@ -24,6 +25,9 @@ export class FormularioSemilleroComponent implements OnInit {
     s.idSemillero = this.semilleros.length + 1 + '';
     this.semilleros.push(s);
     this.semillero = new Semillero();
+    }else {
+      alert("el nombre no puede ser vacio")
+    }
   }
 
   eliminarSemillero(event: Semillero) {

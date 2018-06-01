@@ -4,6 +4,7 @@ import {PlanDocencia} from './plan-docencia';
 
 export class PlanTrabajo {
   idPlanTrabajo: string;
+  periodo: string;
   fechaInicio: Date;
   fechaFin: Date;
   planAdministracion: PlanAdministracion;

@@ -9,7 +9,11 @@
             </div>
             <div class="col-md-2">
               <mat-form-field>
-                <input matInput placeholder="Periodo" name="periodo" [(ngModel)]="planTrabajo.idPlanTrabajo">
+                <mat-select placeholder="Periodo" [(ngModel)]="planTrabajo.periodo">
+                  <mat-option *ngFor="let periodo of periodos" [value]="periodo">
+                    {{ periodo }}
+                  </mat-option>
+                </mat-select>
               </mat-form-field>
             </div>
           </div>

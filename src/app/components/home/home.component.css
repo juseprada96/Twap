@@ -5,6 +5,7 @@
   left: 0;
   right: 0;
   background: #eee;
+  overflow: hidden;
 }
 
 .menu-item {
@@ -60,5 +61,5 @@ a:hover {
 }
 
 .overflow {
-  overflow: auto;
+  overflow-x: hidden;
 }

@@ -69,6 +69,7 @@ export class FormularioAsignaturaComponent implements OnInit {
         this.asignaturaSelecionada = new Asignatura();
       } else {
         alert('La asignatura ya fue adicionada');
+        this.asignaturaSelecionada = new Asignatura();
       }
     } else {
       alert('Seleccione una asignatura');

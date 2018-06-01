@@ -15,12 +15,16 @@ export class FormularioPropuestaInvestigacionComponent implements OnInit {
   }
 
   agregarPropuesta() {
+    if(this.propuesta.nombrePropuesta.trim()){
     let p = new PropuestaInvestigacion();
     p.fechaPresentacion = new Date();
     p.nombrePropuesta = this.propuesta.nombrePropuesta;
     p.idPropuestaInvestigacion = (this.propuestas.length + 1).toString();
     this.propuestas.push(p);
     this.propuesta = new PropuestaInvestigacion();
+    }else {
+      alert("El nombre no puede ser vacio")
+    }
   }
 
   eliminarPropuesta(event: PropuestaInvestigacion) {

@@ -16,7 +16,7 @@ export class FormularioInvestigacionComponent implements OnInit {
   ngOnInit() {
     this.planInvestigacion.propuestaInvestagacion = [];
     this.planInvestigacion.proyectosInvestigacion = [];
-    this.planInvestigacion.proyectosJovenes = [];
+    this.planInvestigacion.jovenes = [];
   }
 
 }

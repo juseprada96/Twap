@@ -7,11 +7,12 @@
   top: 6em;
 }
 
+
 .float {
   font-size: 30px;
   position: absolute;
   top: 18em;
-  left: 38em;
+  left: 80%;
   z-index: 1200;
   background-color: #6ed8f4;
   height: 2em;

@@ -17,12 +17,16 @@ export class FormularioProyectoGradoComponent implements OnInit {
   }
 
   agregarProyecto() {
+    if(this.proyecto.nombre){
     let p = new ProyectoGrado;
     p.nombre = this.proyecto.nombre;
     p.numeroProyecto = this.proyectos.length + 1;
     p.estudiantes = [];
     this.proyectos.push(p);
     this.proyecto = new ProyectoGrado();
+    }else {
+      alert("El nombre no puede ser vacio")
+    }
   }
 
   eliminarProyecto(event: ProyectoGrado) {

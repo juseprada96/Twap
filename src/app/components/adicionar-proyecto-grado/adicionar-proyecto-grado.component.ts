@@ -24,7 +24,7 @@ export class AdicionarProyectoGradoComponent implements OnInit {
   }
 
   eliminarEstudiante(codigo: string) {
-    let index = this.proyecto.estudiantes.findIndex(estudiante => estudiante.codigo == codigo);
+    let index = this.proyecto.estudiantes.findIndex(estudiante => estudiante.codigo === codigo);
     this.proyecto.estudiantes.splice(index, 1);
   }
 
